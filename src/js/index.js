@@ -76,8 +76,8 @@ $('.fairshare').on("click", function() {
     $('.link-a').removeClass("disabled");
     $('.link-c').removeClass("disabled");
 
+    $('.content-aidhub').removeClass("show");
     $('.content-carma').removeClass("show");
-    $('.content-fairshare').removeClass("show");
     $('.fairshare').addClass("disabled");
     $('.aidhub').removeClass("disabled");
     $('.carma').removeClass("disabled");
