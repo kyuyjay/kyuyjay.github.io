@@ -1,0 +1,42 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #c0c5ce; /* 1 */
+}   
+
+a:active {
+    color: #343d46; /* 5 */
+}
+
+.emph {
+    text-decoration: underline;
+}
+
+.active {
+    color: #c0c5ce; /* 1 */
+}
+
+.navbar {
+    background-color: #343d46; /* 5 */
+    height: 40px;
+}
+
+#wrapper {
+    background-color: #4f5b66; /* 4 */
+}
+
+.content {
+    height: calc(100vh - 40px);
+    overflow: auto;
+}
+
+img.grayscale {
+    filter: grayscale(100%);
+}
