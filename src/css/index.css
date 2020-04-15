@@ -41,6 +41,14 @@ a:active {
     overflow: auto;
 }
 
+.cv {
+    text-align: center;
+}
+
+.cvlist {
+    list-style-position: inside;
+}
+
 @media (max-width: 576px) {
     .navbar {
         height: auto;
@@ -50,6 +58,13 @@ a:active {
     }
     .content {
         height: auto;
+    }
+    .cv {
+        text-align: left;
+    }
+    .cvlist {
+        list-style-type: disc;
+        list-style-position: outside;
     }
 
 }
