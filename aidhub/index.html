@@ -1,0 +1,166 @@
+<html>
+<head>
+    <meta property="og:title" content="AidHub - COVID-19 Mutual Aid in SG" />
+    <meta property="og:description" content="The Mutual Aid Hub helps connect those who need resources with those who can afford them during this Covid-19 situation" />
+    <meta property="og:image" content="http://aidhubsg.com/img/logo_fb.jpeg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://aidhubsg.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>AidHub - COVID-19 Mutual Aid in SG</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper" class="px-0 vh-100">
+        <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-dark justify-content-between">
+            <div class="d-flex align-middle">
+                <a class="navbar-brand" href="/">AidHub</a>
+                <a id="contribute-nav-btn" href="contribute.html" class="btn btn-primary init" type="button">Submit an Initiative</a>
+            </div>
+            <div>
+                <a id="filter-nav" href="#" class="init btn btn-primary collapse filter-toggle" type="button" data-toggle="collapse" data-target=".filter-toggle">Filter</a>
+                <a id="contribute-nav-sm" href="contribute.html" class="btn btn-primary init" type="button">Submit an Initiative</a>
+            </div>
+            <div id="contact" class="init show">
+                <a href="https://github.com/kyuyjay/AidHub" target="_blank"><img src="img/GitHub-Mark/GitHub-Mark-Light-32px.png" width="20px" height="20px" class="mr-1"/></a>
+                <!-- <a href="https://www.linkedin.com/in/qyongjian/"><img src="img/LinkedIn-Logos/LI-In-Bug.png" width="20px" height="20px" style="filter: grayscale(100%);" /></a> -->
+                <a href="https://instagram.com/aidhubsg/" target="_blank"><img height="20px" src="img/instagram.png" /></a>
+                <a href="https://t.me/aidhubsg" target="_blank"><img height="20px" src="img/512px-Telegram_logo.png" /></a>
+            </div>
+        </nav>
+        <div id="landing" class="p-0 collapse show init flex">
+            <div id="landing-body" class="m-auto px-0 container">
+                <!-- <img id="landing-bg" class="mx-auto" src="img/landing.jpg"> -->
+                <div class="row mb-2 px-0 mx-0">
+                    <div class="col" align="center">
+                        <img src="img/logo.jpg" width="150" class="img-fluid" />
+                    </div>
+                </div>
+                <div class="row px-0 mx-0">
+                    <div class="col px-0">
+                        <p>As the COVID-19 situation evolves, so does our community. This hub serves to help connect those who need resources with those who can offer them, by listing initiatives to redistribute items, services, money and opportunities across Singapore. Below, you can filter out the initiatives by category or type of aid you need or wish to contribute. If you want to add an initiative that you head or know about, please click the 'Submit an initiative' below! </p>
+
+                        <p>If you are looking through this hub for ways to contribute resources, please remember that taking care of yourself is as important as taking care of your community. To prevent yourself from getting overwhelmed or burning out:</p>
+                        <ol>
+                            <li>Instead of browsing all the initiatives, form an idea of what you want to contribute, and then filter by category or type of aid.</li>
+                            <li>Before donating funds, evaluate your finances and create a budget for how much you can comfortably donate.</li>
+                        </ol>                         
+                        <p>We are here for each other, for the long haul.</p>
+
+                        <p>If you have any ideas for improving or distributing this hub, contact us via <a href="mailto:climatemediahub@gmail.com">email</a>, or follow us on social media below.</p>
+                    </div>
+                </div>
+                <div class="row px-0 mx-0 mb-3 justify-content-center">
+                    <div class="col-sm-4" align="center">
+                        <a href="https://instagram.com/aidhubsg/" target="_blank" class="mr-2"><img height="32px" src="img/instagram.png" /></a>
+                        <a href="https://t.me/aidhubsg" target="_blank"><img height="32px" src="img/512px-Telegram_logo.png" /></a>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-5">
+                            <select id="cats" class="form-control">
+                                <option value="all">All Categories</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <select id="micro-genres" class="form-control">
+                                <option value="all">All Types of Aid</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2" align="right">
+                            <button id="search" type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target=".init">Get Resources</button>
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="col"></div>
+                        <div class="col-md-4" align="center">
+                            <a href="contribute.html" class="btn btn-block btn-primary">Submit an Initiative</a>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="main" class="container-fluid px-0 mt-3 collapse init" data-parent="#wrapper">
+            <div class="row mx-0 w-100">
+                <div id="filter-bar" class="col-3">
+                    <form id="filter" class="filters p-4 w-100">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Filter by</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col my-2">
+                                <label for="filter-cats">Categories</label>
+                                <select id="filter-cats" class="form-control mr-1 input-lg">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="filter-genres">Type</label>
+                                <select id="filter-genres" class="form-control input-lg">
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="testbed" class="col filter-toggle show">
+                    <!-- Canvas goes here -->
+                </div>
+                <div id="filter-bar-sm" class="collapse filter-toggle w-100 px-3 m-auto" class="col">
+                    <form id="filter-sm" class="filters p-4 w-100">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Filter by</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col my-2">
+                                <label for="filter-cats-sm">Categories</label>
+                                <select id="filter-cats-sm" class="form-control mr-1 input-lg">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="filter-genres-sm">Type</label>
+                                <select id="filter-genres-sm" class="form-control input-lg">
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <button class="init btn-block btn btn-primary collapse" type="button" data-toggle="collapse" data-target=".filter-toggle">
+                        Filter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delete-popup" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Are you sure you want to delete?</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="deleteEntry()">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="lib/jquery-3.4.1.min.js"></script>
+<script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="lib/d3/d3.v5.min.js"></script>
+<script src="lib/d3/d3-tip.min.js"></script>
+<script src="src/js/index.js"></script>
+</html>
